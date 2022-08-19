@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": " cypress open"
+    "test": "./node_modules/.bin/cypress run",
+    "headTest": "npm run test --headed",
+    "chromeTest": "npm run test --browser chrome",
+    "recordDashboardTest": "npm run test -- --record --key e11b538e-ace8-4124-846b-84c6a3c4b1e3",
+    "pageObjectTest": "npm run test -- --spec \"cypress/e2e/PageObjects/*\""
   },
   "author": "shahriyar",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.4.0"
+    "cypress": "10.6.0",
+    "@badeball/cypress-cucumber-preprocessor": "^12.0.1",
+    "@cypress/webpack-preprocessor": "^5.12.2",
+    "cyress-fill-command": "^1.0.2"
   }
 }

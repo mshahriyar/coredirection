@@ -5,7 +5,8 @@ class LoginPage
     
     visit()
     {
-        cy.visit("https://my.coredirection.com/login")
+        cy.visit('/')
+        //cy.visit(cypress.e2e('baseUrl'))
         cy.get('.btn-sign-in').click()
 
     }
